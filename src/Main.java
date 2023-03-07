@@ -2,10 +2,18 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {3,2,4};
-        int target = 6;
-        int[] arr = twoSum(nums, target);
+        int num = 2932;
+        int[] arr = new int[4];
+        int i = 4;
+        while(num > 0){
+            int d = num % 10;
+            arr[i-1] = d;
+            num = num / 10;
+            i--;
+        }
         System.out.println(Arrays.toString(arr));
+
+
     }
 
     public static int[] twoSum(int[] nums, int target) {
